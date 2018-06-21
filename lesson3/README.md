@@ -1,5 +1,9 @@
 # Lesson 3 How To Guide
 
+#### Setting up an express Server
+
+> https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction
+
 Start by opening the console then enter this command. (`without the $`)
 
 ```sh
