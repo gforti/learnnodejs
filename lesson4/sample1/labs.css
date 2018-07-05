@@ -1,0 +1,62 @@
+input#togglelabresults {
+    display: none;
+    visibility: hidden;
+}
+label[for="togglelabresults"] {
+    display: block;
+    padding: 0.2em;
+    text-align: center;
+    background-image: linear-gradient(109deg, #eee 0%, #fff 100%);
+    border-bottom: 1px solid #CCC;
+    color: #555; 
+}
+label[for="togglelabresults"]:hover {
+    color: #000;
+}
+label[for="togglelabresults"]::before {
+    font-family: Consolas, monaco, monospace;
+    font-weight: bold;
+    font-size: 15px;
+    content: "+";
+    vertical-align: text-top;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+    background-image: radial-gradient(ellipse at center, #CCC 50%, transparent 50%);
+}
+#labResults-rnt7dvtto9 {
+    height: 0px;
+    overflow: auto;
+    transition: height 0.5s;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#labResults-rnt7dvtto9 p {
+    font-size: 14px;
+    padding: 0.2em;  
+    text-align: center;
+    border-radius: 4px;
+    margin-right: 2px;
+}
+
+#labResults-rnt7dvtto9 p.pass {
+    background-image: linear-gradient(109deg, #a6b779 0%, #fff 100%);    
+    border-left: 6px solid #486900;
+    color: #486900;
+}
+
+#labResults-rnt7dvtto9 p.fail {
+    background-image: linear-gradient(109deg, #f4d7c9 0%, #fff 100%);     
+    border-left: 6px solid #e66e33;
+    color: #e66e33;
+}
+
+#togglelabresults:checked ~ #labResults-rnt7dvtto9 {
+    height: 80px;
+}
+#togglelabresults:checked ~ label[for="togglelabresults"]::before {
+    content: "-";
+}
