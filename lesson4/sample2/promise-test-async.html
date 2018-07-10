@@ -1,0 +1,41 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div></div>
+        <button>Run Promise</button>
+        
+        <script>
+
+            const div = document.querySelector('div')
+            
+            document.querySelector('button').addEventListener( 'click', test)
+            let counter = 1;
+
+            async function  test() {
+                let min = 1000, max = 5000
+                const waiting = ~~(Math.random() * (max - min) + min);
+
+                let prom =  new Promise((resolve, reject) => {
+                                console.log('counter', counter)
+                                setTimeout(resolve, waiting, `${counter} : done in ${waiting}`)                                
+                            })
+                
+                let result = await prom;
+                console.log(result)
+                counter++
+            
+
+            }
+
+
+</script>
+
+    </body>
+</html>
