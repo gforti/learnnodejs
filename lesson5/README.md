@@ -7,7 +7,7 @@ The idea is that a web token is consisted of three parts.
 - Header = A JSON with the type of token and the hash Algorithm used
 - Payload = JSON information that you can extract, most importantly when the token expires
 - Signature = A hash combination of the header + payload + a secret key
-### Create a .env file
+### Creating a .env file
 
 You can create a empty file with the extention `.env`.  environment variables are stored only on the machine they are set on.
 In this case we are loading a file that has a key=value pair.  Database connections etc. are normally stored this way.
@@ -32,3 +32,15 @@ Doing this will add the variables to the process.env object.
 ```js
 process.env.JWT_SECRET
 ```
+
+### Run the demo
+
+So to run the demo you will need to use the command (after installing all the packages)
+
+```sh
+$ npm start
+```
+
+Once that is done, on the root folder there is an index.html page.  Run that in your browser.
+
+> Note that if you use netbeans, running a webpage file allows you to run it in netbeans internal server so you can make the rest calls with no problems.
